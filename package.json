@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-dev": "node ./initializers/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,11 +15,16 @@
     "babel-loader": "^6.2.10",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
     "eslint": "^3.12.2",
     "eslint-plugin-destructuring": "^2.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "^6.8.0",
+    "file-loader": "^0.9.0",
     "react-hot-loader": "^3.0.0-beta.6",
+    "semantic-ui": "^2.2.7",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
   },
@@ -26,6 +32,7 @@
     "lodash": "^4.17.3",
     "moment": "^2.17.1",
     "react": "^15.4.1",
-    "react-dom": "^15.4.1"
+    "react-dom": "^15.4.1",
+    "semantic-ui-react": "^0.63.1"
   }
 }

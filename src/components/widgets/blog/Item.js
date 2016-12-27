@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from 'semantic-ui-react';
+
 import TextBox  from './elements/TextBox';
 import Like     from './elements/Like';
 import Meta     from './elements/Meta';
@@ -7,6 +9,7 @@ import Image    from './elements/Image';
 
 const BlogItem = ({item}) => (
   <div style={style}>
+    <Button>Like</Button>
     <Image {...item.image} />
     <TextBox>{item.title}</TextBox>
     <Meta { ...item.meta } />
