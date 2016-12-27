@@ -7,7 +7,7 @@ import Image    from './elements/Image';
 
 const BlogItem = ({item}) => (
   <div style={style}>
-    <Image { ...item.image } />
+    <Image {...item.image} />
     <TextBox>{item.title}</TextBox>
     <Meta { ...item.meta } />
   </div>
