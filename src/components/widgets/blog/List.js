@@ -1,21 +1,23 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 import { map } from 'lodash/collection';
+
+import { Item } from 'semantic-ui-react';
 
 import BlogItem from './Item';
 
 const BlogList = ({ items }) => (
-  <div style={style}>
+  <Item.Group>
     {
       map(items, (item, key) =>
         <BlogItem item={item} key={key} />
       )
     }
-  </div>
+  </Item.Group>
 );
 
-const style = {
-  padding: '50px 100px'
+BlogList.propTypes = {
+  items: PropTypes.array
 };
 
 export default BlogList;
