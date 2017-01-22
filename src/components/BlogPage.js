@@ -1,13 +1,25 @@
 import React from 'react';
 
-import { items as staticItems } from 'constants/static/items';
+import request from 'superagent';
 
 import BlogList from 'components/widgets/blog/List';
 
 class BlogPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { items: staticItems };
+    this.state = { items: [] };
+  }
+
+  componentDidMount() {
+    this.fetchPosts();
+  }
+
+  fetchPosts() {
+    request.get(
+      'http://localhost:3001/',
+      {},
+      (err, res) => this.setState({ items: res.body })
+    );
   }
 
   render() {
