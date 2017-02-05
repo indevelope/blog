@@ -4,16 +4,14 @@ import { Item } from 'semantic-ui-react';
 
 import BlogItem from 'components/widgets/blog/Item';
 
-import { items } from 'constants/static/items';
-
-const Post = ({ params }) => (
+const Post = ({ item }) => (
   <Item.Group>
-    <BlogItem item={items[params.id - 1]} />
+    {item && <BlogItem item={item} />}
   </Item.Group>
 );
 
 Post.propTypes = {
-  params: PropTypes.object
+  item: PropTypes.object
 };
 
 export default Post;
