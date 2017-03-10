@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import BlogList from 'components/widgets/blog/List';
+import Index from 'components/views/Index';
 
 const stateToProps = (state) => ({
   items: state.posts.entries,
@@ -8,4 +8,4 @@ const stateToProps = (state) => ({
   error: state.posts.error
 });
 
-export default connect(stateToProps)(BlogList);
+export default connect(stateToProps)(Index);
