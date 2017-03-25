@@ -1,15 +1,14 @@
 import React, { PropTypes } from 'react';
 
-import { Button, Segment, Header, Container } from 'semantic-ui-react';
+import { Segment, Header, Container, Menu } from 'semantic-ui-react';
 
 import Link from 'components/elements/Link';
 
-import history from 'helpers/history';
+import { contactsPath } from 'helpers/routes';
 
 const MainLayout = ({ children }) => (
   <Container>
     <Logo />
-    <GoBackButton />
     {children}
     <Footer />
   </Container>
@@ -21,15 +20,16 @@ MainLayout.propTypes = {
 
 export default MainLayout;
 
-const GoBackButton = () => (
-  <Button onClick={() => history.goBack()}>Назад</Button>
-);
-
 const Logo = () => (
-  <Segment>
-    <Header>
+  <Segment clearing>
+    <Header floated='left'>
       <Link to='/'>Thinknetica Blog</Link>
     </Header>
+    <Menu floated='right' compact={true}>
+      <Link to={contactsPath()}>
+        <Menu.Item>Contacts</Menu.Item>
+      </Link>
+    </Menu>
   </Segment>
 );
 

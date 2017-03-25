@@ -1,13 +1,14 @@
 import MainLayout from 'components/layouts/MainLayout';
 
 import initialLoad from 'helpers/initialLoad';
-import { postsPath } from 'helpers/routes';
+import { postsPath, contactsPath } from 'helpers/routes';
 
 import { fetchPosts } from 'actions/Posts';
 import { fetchPost } from 'actions/Post';
 
 import PostsContainer from 'containers/PostsContainer';
 import PostContainer from 'containers/PostContainer';
+import ContactsView from 'components/views/Contacts';
 
 const Index = {
   path: '/',
@@ -27,10 +28,16 @@ const PostRoute = {
   }
 };
 
+const ContactsRoute = {
+  path: '/contacts',
+  component: ContactsView
+};
+
 export default {
   component: MainLayout,
   childRoutes: [
     Index,
-    PostRoute
+    PostRoute,
+    ContactsRoute
   ]
 };
