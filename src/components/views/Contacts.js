@@ -92,7 +92,7 @@ export default Contacts;
 
 const Text = ({ name, value, onChange, label, error }) => (
   <div className={classNames('ui field', { error })}>
-    <label for={name}>{label}:</label>
+    <label htmlFor={name}>{label}:</label>
     <input
       name={name}
       id={name}
@@ -106,7 +106,7 @@ const Text = ({ name, value, onChange, label, error }) => (
 
 const TextArea = ({ name, value, onChange, label }) => (
   <div className="ui field">
-    <label for={name}>{label}:</label>
+    <label htmlFor={name}>{label}:</label>
     <textarea
       name={name}
       id={name}
