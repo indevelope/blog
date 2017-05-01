@@ -23,4 +23,8 @@ BlogItem.propTypes = {
   item: PropTypes.object
 };
 
+BlogItem.defaultProps = {
+  item: {}
+};
+
 export default BlogItem;
