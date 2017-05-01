@@ -37,7 +37,10 @@ export default {
   },
 
   resolve: {
-    root: root
+    modules: [
+      path.join(process.cwd(), 'src'),
+      'node_modules'
+    ]
   },
 
   plugins: [
