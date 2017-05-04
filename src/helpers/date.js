@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-import { DEFAULT_DATE_FORMAT } from 'constants/date';
+import { DEFAULT_DATE_FORMAT } from 'constants/Date';
 
 export function formatDate(date) {
   return moment(date).format(DEFAULT_DATE_FORMAT);

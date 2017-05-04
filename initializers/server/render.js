@@ -7,6 +7,8 @@ import Helmet from 'react-helmet';
 
 import { compact } from 'lodash/array';
 
+import webpackAsset from './webpackAsset';
+
 import createStore from 'store';
 import routes from 'routes';
 
@@ -32,8 +34,12 @@ export default (req, res) => {
       res.status(200);
       res.render(
         'index',
-        { initialState, content, head }
+        { initialState, content, head, webpackAsset }
       );
+    })
+    .catch(() => {
+      res.status(404);
+      res.send('404 Error');
     })
   );
 };
